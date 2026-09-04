@@ -3,6 +3,7 @@ import { Noto_Sans_KR } from "next/font/google";
 import "./globals.css";
 import Header from "@/widgets/header/ui/Header";
 import Footer from "@/widgets/footer/ui/Footer";
+import ScrollToTopButton from "@/widgets/scroll-to-top/ui/ScrollToTopButton";
 
 const notoSansKr = Noto_Sans_KR({
   variable: "--font-noto-kr",
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <ScrollToTopButton />
       </body>
     </html>
   );
