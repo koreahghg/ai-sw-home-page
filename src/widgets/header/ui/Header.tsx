@@ -31,8 +31,8 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`rounded-full px-4 py-1.5 text-base font-medium transition ${
-                  active ? "bg-brand-light text-brand" : "text-gray-600 hover:text-gray-900 hover:font-semibold"
+                className={`rounded-full px-4 py-1.5 text-base font-medium transition duration-300 ${
+                  active ? "text-gray-900 font-semibold" : "text-gray-600 hover:text-gray-900 hover:font-semibold"
                 }`}
               >
                 {item.label}

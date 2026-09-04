@@ -20,7 +20,7 @@ export default function LocalNav({ title, items }: { title: string; items: Local
       <ul className="mt-2 flex gap-1 overflow-x-auto px-1 pb-2 sm:mt-3 sm:flex-col sm:gap-1 sm:overflow-visible sm:px-0 sm:pb-0">
         {items.map((item) => {
           const isActive = item.onClick ? item.active : item.active ?? (item.href ? pathname === item.href : false);
-          const className = `block whitespace-nowrap rounded-lg px-3 py-2 text-sm font-medium transition ${
+          const className = `block w-40 whitespace-nowrap rounded-lg px-3 py-2 text-center text-sm font-medium transition sm:w-full sm:text-left ${
             isActive ? "bg-brand-light font-semibold text-brand" : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
           }`;
 

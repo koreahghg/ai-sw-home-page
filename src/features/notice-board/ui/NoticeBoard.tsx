@@ -11,7 +11,7 @@ export default function NoticeBoard() {
   const [tab, setTab] = useState<(typeof TABS)[number]>("공지사항");
 
   return (
-    <div className="mx-auto flex max-w-4xl flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">
+    <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">
       <LocalNav
         title="알림마당"
         items={TABS.map((t) => ({ key: t, label: t, active: tab === t, onClick: () => setTab(t) }))}
