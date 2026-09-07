@@ -3,17 +3,19 @@ import LocalNav from "@/widgets/local-nav/ui/LocalNav";
 import { guideNavItems } from "@/shared/config/guide-nav";
 
 const OVERVIEW = [
-  { label: "행사명", value: "2026 AI미래교육박람회" },
-  { label: "일시", value: "2026. 10. 31.(금) - 11. 1.(토), 09:30 ~ 17:00" },
-  { label: "장소", value: "OO컨벤션센터 (1층 · 2층 전시장, 강당)" },
-  { label: "대상", value: "학생·학부모(AI·SW 한마당) / 전국 유·초·중등 교원(미래교육박람회)" },
-  { label: "주최·주관", value: "2026 AI미래교육박람회 조직위원회" },
+  { label: "행사명", value: "2026 전남광주통합특별시교육청 AI·SW체험한마당" },
+  { label: "주제", value: "AI로 연결하고, 미래를 열다 (예정)" },
+  { label: "일정", value: "2026. 10. 31.(토) 9:30 ~ 17:00 / 11. 1.(일) 9:30 ~ 16:00 (행사장 개장 9:00 예정)" },
+  { label: "장소", value: "전남광주통합특별시교육청AI교육원 일원 (주차장 야외 부스 포함)" },
+  { label: "대상", value: "관내 초‧중‧고‧특수학교 학생, 교직원, 학부모, 일반시민 등" },
+  { label: "주최", value: "전남광주통합특별시교육청" },
+  { label: "주관", value: "전남광주통합특별시교육청AI교육원" },
 ];
 
 export default function GuideOverviewPage() {
   return (
     <div>
-      <PageHero title="박람회 안내" desc="행사 개요부터 오시는 길까지, 2026 AI미래교육박람회의 모든 기본 정보를 확인하세요." />
+      <PageHero title="박람회 안내" desc="행사 개요부터 오시는 길까지, 2026 전남광주통합특별시교육청 AI·SW체험한마당의 모든 기본 정보를 확인하세요." />
 
       <div className="flex flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">
         <LocalNav title="박람회 안내" items={guideNavItems} />

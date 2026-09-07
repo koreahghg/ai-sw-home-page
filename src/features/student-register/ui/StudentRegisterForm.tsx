@@ -16,7 +16,7 @@ export default function StudentRegisterForm() {
   const [phone, setPhone] = useState("");
   const [verified, setVerified] = useState(false);
   const [region, setRegion] = useState("");
-  const [date, setDate] = useState("10.31(금)");
+  const [date, setDate] = useState("10.31(토)");
   const [time, setTime] = useState("오전");
   const [participants, setParticipants] = useState<Participant[]>([{ name: "", schoolLevel: "" }]);
   const [submitted, setSubmitted] = useState(false);
@@ -60,8 +60,8 @@ export default function StudentRegisterForm() {
         <div className="grid grid-cols-2 gap-3">
           <Field label="방문 일자" required>
             <select value={date} onChange={(e) => setDate(e.target.value)} className={inputClass}>
-              <option value="10.31(금)">10.31(금)</option>
-              <option value="11.1(토)">11.1(토)</option>
+              <option value="10.31(토)">10.31(토)</option>
+              <option value="11.1(일)">11.1(일)</option>
             </select>
           </Field>
           <Field label="방문 시간대" required>

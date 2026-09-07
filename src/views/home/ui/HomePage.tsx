@@ -9,9 +9,9 @@ export default function HomePage() {
     <div>
       <section className="bg-gradient-to-br from-brand via-brand-deep to-accent text-white">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
-          <p className="text-sm font-semibold text-sky-100">2026.10.31.(금) - 11.1.(토) &nbsp;|&nbsp; OO컨벤션센터</p>
+          <p className="text-sm font-semibold text-sky-100">2026.10.31.(토) - 11.1.(일) &nbsp;|&nbsp; 전남광주통합특별시교육청AI교육원</p>
           <h1 className="mt-3 text-3xl font-black leading-tight sm:text-5xl">
-            2026 AI미래교육박람회
+            2026 전남광주 AI·SW체험한마당
           </h1>
           <p className="mt-4 max-w-xl text-sm text-sky-100 sm:text-base">
             학생을 위한 AI·SW 한마당과 교원을 위한 미래교육박람회가 한자리에.

@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import { timeline, CATEGORY_STYLE } from "@/entities/schedule/model/data";
 
-const DATES = ["10.31(금)", "11.1(토)"] as const;
+const DATES = ["10.31(토)", "11.1(일)"] as const;
 
 export default function TimelineSection() {
   const [date, setDate] = useState<(typeof DATES)[number]>(DATES[0]);

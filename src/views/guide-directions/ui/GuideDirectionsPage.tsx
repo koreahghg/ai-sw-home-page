@@ -15,7 +15,7 @@ export default function GuideDirectionsPage() {
           <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div className="rounded-2xl border border-gray-100 bg-white p-5">
               <p className="text-sm font-semibold text-gray-800">🚗 자가용</p>
-              <p className="mt-1 text-sm text-gray-500">OO컨벤션센터 지하주차장 이용 (혼잡 예상, 대중교통 권장)</p>
+              <p className="mt-1 text-sm text-gray-500">전남광주통합특별시교육청AI교육원 주차장 이용 (혼잡 예상, 대중교통 권장)</p>
             </div>
             <div className="rounded-2xl border border-gray-100 bg-white p-5">
               <p className="text-sm font-semibold text-gray-800">🚇 지하철</p>

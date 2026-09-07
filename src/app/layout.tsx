@@ -12,8 +12,8 @@ const notoSansKr = Noto_Sans_KR({
 });
 
 export const metadata: Metadata = {
-  title: "2026 AI미래교육박람회",
-  description: "학생·학부모와 교원을 위한 2026 AI미래교육박람회 공식 홈페이지 - 체험 부스, AI·SW 골든벨, 교사 연수, 미래교육 특강 사전신청 안내",
+  title: "2026 전남광주 AI·SW체험한마당",
+  description: "학생·학부모와 교원을 위한 2026 전남광주 AI·SW체험한마당 공식 홈페이지 - 체험 부스, AI·SW 골든벨, 교사 연수, 미래교육 특강 사전신청 안내",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

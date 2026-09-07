@@ -9,7 +9,7 @@ export default function AiTourForm() {
     grade: "",
     name: "",
     phone: "",
-    date: "10.31(금)",
+    date: "10.31(토)",
     guardianAgree: false,
   });
   const [submitted, setSubmitted] = useState(false);
@@ -35,8 +35,8 @@ export default function AiTourForm() {
     >
       <Field label="희망 일자" required>
         <select value={form.date} onChange={(e) => set("date", e.target.value)} className={inputClass}>
-          <option value="10.31(금)">10.31(금) 오전</option>
-          <option value="11.1(토)">11.1(토) 오전</option>
+          <option value="10.31(토)">10.31(토) 오전</option>
+          <option value="11.1(일)">11.1(일) 오전</option>
         </select>
       </Field>
       <Field label="학교" required>

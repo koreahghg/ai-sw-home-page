@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { NAV_SECTIONS } from "@/shared/config/site-nav";
 
 export default function Header() {
@@ -11,10 +11,20 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const [openDesktopKey, setOpenDesktopKey] = useState<string | null>(null);
   const [openMobileKey, setOpenMobileKey] = useState<string | null>(null);
+  const [openSeq, setOpenSeq] = useState(0);
+  const openSeqRef = useRef(0);
 
   const closeMobileMenu = () => {
     setOpen(false);
     setOpenMobileKey(null);
+  };
+
+  const openDesktopMenu = (key: string) => {
+    if (openDesktopKey === null) {
+      openSeqRef.current += 1;
+      setOpenSeq(openSeqRef.current);
+    }
+    setOpenDesktopKey(key);
   };
 
   return (
@@ -27,7 +37,7 @@ export default function Header() {
     >
       <div className="relative flex items-center justify-between px-4 py-2.5 sm:px-6">
         <Link href="/" className="flex items-center" onClick={closeMobileMenu}>
-          <Image src="/logo.png" alt="2025 AI 광주 미래교육박람회" width={138} height={60} className="h-9 w-auto sm:h-10" priority />
+          <Image src="/logo.png" alt="2026 전남광주 AI·SW체험한마당" width={138} height={60} className="h-9 w-auto sm:h-10" priority />
         </Link>
 
         <div className="flex items-center gap-6">
@@ -38,7 +48,7 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  onMouseEnter={() => setOpenDesktopKey(item.key)}
+                  onMouseEnter={() => openDesktopMenu(item.key)}
                   className={`block rounded-full px-2 py-1.5 text-base font-medium transition duration-300 ${
                     active ? "text-gray-900 font-semibold" : "text-gray-600 hover:text-gray-900 hover:font-semibold"
                   }`}
@@ -61,18 +71,18 @@ export default function Header() {
       </div>
 
       <div
-        className={`absolute inset-x-0 top-full hidden overflow-hidden transition-opacity duration-300 ease-out md:block ${
-          openDesktopKey ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
+        className={`absolute inset-x-0 top-full hidden overflow-hidden transition-opacity ease-out md:block ${
+          openDesktopKey ? "pointer-events-auto opacity-100 duration-200" : "pointer-events-none opacity-0 duration-500"
         }`}
       >
         <div className="shadow-[0_24px_48px_-24px_rgba(15,23,42,0.16)]">
-          <div className="grid grid-cols-5 gap-8 bg-white px-4 py-8 sm:px-6">
+          <div key={openSeq} className="grid grid-cols-5 gap-8 bg-white px-4 py-8 sm:px-6">
             {NAV_SECTIONS.map((section) => (
               <div key={section.key}>
                 <p className="text-sm font-medium text-gray-400">{section.label}</p>
                 <ul className="mt-4 flex flex-col gap-1">
                   {section.sub.map((s, i) => (
-                    <li key={s.key} className={openDesktopKey ? "animate-[nav-item-in_0.35s_ease-out_both]" : undefined} style={openDesktopKey ? { animationDelay: `${i * 40}ms` } : undefined}>
+                    <li key={s.key} className="animate-[nav-item-in_1s_ease-out_both]" style={{ animationDelay: `${i * 40}ms` }}>
                       <Link
                         href={s.href}
                         onClick={() => setOpenDesktopKey(null)}
