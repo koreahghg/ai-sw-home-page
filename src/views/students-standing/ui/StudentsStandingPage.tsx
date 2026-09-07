@@ -1,0 +1,22 @@
+import PageHero from "@/shared/ui/PageHero";
+import LocalNav from "@/widgets/local-nav/ui/LocalNav";
+import { studentsNavItems } from "@/shared/config/students-nav";
+
+export default function StudentsStandingPage() {
+  return (
+    <div>
+      <PageHero title="상설 체험" desc="사전신청 없이 누구나 자유롭게 참여할 수 있는 상시 운영 체험존입니다." />
+
+      <div className="flex flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">
+        <LocalNav title="학생마당" items={studentsNavItems} />
+
+        <div className="min-w-0 flex-1">
+          <h2 className="text-lg font-bold text-gray-900">상설 체험</h2>
+          <p className="mt-2 text-sm text-gray-500">
+            사전신청 없이 누구나 자유롭게 참여할 수 있는 상시 운영 체험존입니다. (3D프린팅 체험, AI 그림퀴즈, 코딩 보드게임 등)
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}

@@ -1,58 +1,17 @@
 import Link from "next/link";
-import { applyNavItems } from "@/shared/config/apply-nav";
-
-const FNB_COLUMNS = [
-  {
-    title: "박람회 안내",
-    links: [
-      { href: "/guide#overview", label: "행사 개요" },
-      { href: "/guide#schedule", label: "전체 일정표" },
-      { href: "/guide#map", label: "부스 배치도" },
-      { href: "/guide#directions", label: "오시는 길" },
-    ],
-  },
-  {
-    title: "학생마당",
-    links: [
-      { href: "/students#booths", label: "체험 부스 안내" },
-      { href: "/students#golden-bell", label: "AI·SW 골든벨" },
-      { href: "/students#ai-tour", label: "AI교육원 탐방" },
-      { href: "/students#standing", label: "상설 체험" },
-    ],
-  },
-  {
-    title: "교사마당",
-    links: [
-      { href: "/teachers#booths", label: "부스 안내" },
-      { href: "/teachers#training", label: "교사 연수" },
-      { href: "/teachers#lecture", label: "미래교육 특강" },
-    ],
-  },
-  {
-    title: "사전신청",
-    links: applyNavItems.filter((item) => item.key !== "hub"),
-  },
-  {
-    title: "알림마당",
-    links: [
-      { href: "/notice", label: "공지사항" },
-      { href: "/notice", label: "FAQ" },
-      { href: "/notice", label: "주차 안내" },
-    ],
-  },
-];
+import { NAV_SECTIONS } from "@/shared/config/site-nav";
 
 export default function Footer() {
   return (
     <footer className="mt-16 border-t border-black/5 bg-white">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-5">
-          {FNB_COLUMNS.map((col) => (
-            <div key={col.title}>
-              <p className="text-sm font-bold text-gray-900">{col.title}</p>
+          {NAV_SECTIONS.map((col) => (
+            <div key={col.key}>
+              <p className="text-sm font-bold text-gray-900">{col.label}</p>
               <ul className="mt-3 space-y-2">
-                {col.links.map((link, i) => (
-                  <li key={`${link.href}-${i}`}>
+                {col.sub.map((link) => (
+                  <li key={link.key}>
                     <Link href={link.href} className="text-sm text-gray-500 hover:text-brand">
                       {link.label}
                     </Link>

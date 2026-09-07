@@ -1,5 +1,5 @@
-import GuidePage from "@/views/guide/ui/GuidePage";
+import GuideOverviewPage from "@/views/guide-overview/ui/GuideOverviewPage";
 
 export default function Page() {
-  return <GuidePage />;
+  return <GuideOverviewPage />;
 }
