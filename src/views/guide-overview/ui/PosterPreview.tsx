@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function PosterPreview() {
   return (
-    <div className="w-full shrink-0 sm:w-56">
+    <div className="w-full shrink-0 sm:w-72">
       <div className="flex aspect-[210/297] w-full items-center justify-center overflow-hidden rounded-2xl border border-gray-100 bg-white">
         <Image src="/lg.png" alt="포스터 (임시)" width={643} height={154} className="w-full object-contain" />
       </div>

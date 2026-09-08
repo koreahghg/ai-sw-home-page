@@ -25,11 +25,15 @@ export default function GuideOverviewPage() {
           <h2 className="text-lg font-bold text-gray-900">행사 개요</h2>
           <div className="mt-4 flex flex-col gap-6 sm:flex-row">
             <PosterPreview />
-            <dl className="flex-1 divide-y divide-gray-100 overflow-hidden rounded-2xl border border-gray-100 bg-white">
+            <dl className="grid flex-1 grid-cols-1 items-center gap-x-5 gap-y-4 rounded-2xl border border-gray-100 bg-white p-6 sm:grid-cols-[auto_1fr]">
               {OVERVIEW.map((row) => (
-                <div key={row.label} className="grid grid-cols-1 gap-1 px-5 py-4 sm:grid-cols-[140px_1fr] sm:gap-4">
-                  <dt className="text-sm font-semibold text-gray-500">{row.label}</dt>
-                  <dd className="text-sm text-gray-800">{row.value}</dd>
+                <div key={row.label} className="contents">
+                  <dt>
+                    <span className="inline-flex w-full items-center justify-center whitespace-nowrap rounded-full bg-brand px-10 py-2 text-sm font-bold text-white">
+                      {row.label}
+                    </span>
+                  </dt>
+                  <dd className="text-sm leading-relaxed text-gray-800">{row.value}</dd>
                 </div>
               ))}
             </dl>

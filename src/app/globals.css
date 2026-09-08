@@ -41,3 +41,9 @@ body {
   color: var(--foreground);
   overflow-x: clip;
 }
+
+header a,
+nav a {
+  -webkit-user-drag: none;
+  user-drag: none;
+}
