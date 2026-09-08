@@ -39,7 +39,7 @@ function ApplyCard({ href, title, desc, tag }: { href: string; title: string; de
 export default function ApplyHubPage() {
   return (
     <div>
-      <PageHero title="사전신청" desc="학생·학부모와 교원을 위한 모든 프로그램 신청을 한 곳에서 처리하세요. 신청 내역 조회와 취소도 여기서 가능합니다." />
+      <PageHero title="전체 신청 보기" desc="학생·학부모와 교원을 위한 모든 프로그램 신청을 한 곳에서 처리하세요. 신청 내역 조회와 취소도 여기서 가능합니다." />
 
       <div className="flex flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">
         <LocalNav title="사전신청" items={applyNavItems} />

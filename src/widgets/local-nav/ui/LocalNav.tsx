@@ -28,7 +28,7 @@ export default function LocalNav({ title, items }: { title: string; items: Local
         {items.map((item) => {
           const isActive = item.onClick ? item.active : item.active ?? (item.href ? pathname === item.href : false);
           const className = `block w-40 whitespace-nowrap rounded-lg px-3 py-2 text-center text-sm font-medium leading-snug transition sm:w-full sm:whitespace-normal sm:text-left ${
-            isActive ? "bg-brand-light font-semibold text-brand" : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+            isActive ? "bg-brand font-semibold text-white" : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
           }`;
           const content = (
             <>

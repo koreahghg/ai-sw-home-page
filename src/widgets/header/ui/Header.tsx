@@ -36,8 +36,15 @@ export default function Header() {
       onClick={() => setOpenDesktopKey(null)}
     >
       <div className="relative flex items-center justify-between px-4 py-2.5 sm:px-6">
-        <Link href="/" className="flex items-center" onClick={closeMobileMenu}>
-          <Image src="/logo.png" alt="2026 전남광주 AI·SW체험한마당" width={138} height={60} className="h-9 w-auto sm:h-10" priority />
+        <Link
+          href="/"
+          className="flex items-center"
+          onClick={() => {
+            closeMobileMenu();
+            if (pathname === "/") window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        >
+          <Image src="/lg.png" alt="2026 전남광주 AI·SW체험한마당" width={643} height={154} className="h-9 w-auto sm:h-10" priority />
         </Link>
 
         <div className="flex items-center gap-6">
@@ -82,7 +89,7 @@ export default function Header() {
                 <p className="text-sm font-medium text-gray-400">{section.label}</p>
                 <ul className="mt-4 flex flex-col gap-1">
                   {section.sub.map((s, i) => (
-                    <li key={s.key} className="animate-[nav-item-in_1s_ease-out_both]" style={{ animationDelay: `${i * 40}ms` }}>
+                    <li key={s.key} className="animate-[nav-item-in_0.5s_ease-out_both]" style={{ animationDelay: `${i * 40}ms` }}>
                       <Link
                         href={s.href}
                         onClick={() => setOpenDesktopKey(null)}

@@ -11,7 +11,7 @@ const BOOTHS = [
 export default function TeachersPage() {
   return (
     <div>
-      <PageHero title="교사마당" desc="미래교육박람회 - 교원을 위한 부스 전시, 연수, 특강 프로그램을 확인하세요." />
+      <PageHero title="부스 안내" desc="미래교육박람회 - 교원을 위한 부스 전시, 연수, 특강 프로그램을 확인하세요." />
 
       <div className="flex flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">
         <LocalNav title="교사마당" items={teachersNavItems} />

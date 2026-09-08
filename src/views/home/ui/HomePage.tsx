@@ -7,8 +7,9 @@ import TimelineSection from "@/widgets/event-timeline/ui/TimelineSection";
 export default function HomePage() {
   return (
     <div>
-      <section className="bg-gradient-to-br from-brand via-brand-deep to-accent text-white">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-brand-dark to-brand text-white">
+        <div className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-white/25 blur-3xl" />
+        <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
           <p className="text-sm font-semibold text-sky-100">2026.10.31.(토) - 11.1.(일) &nbsp;|&nbsp; 전남광주통합특별시교육청AI교육원</p>
           <h1 className="mt-3 text-3xl font-black leading-tight sm:text-5xl">
             2026 전남광주 AI·SW체험한마당
