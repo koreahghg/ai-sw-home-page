@@ -3,10 +3,8 @@ import QuickActions from "@/widgets/quick-actions/ui/QuickActions";
 import CapacityWidget from "@/widgets/capacity-status/ui/CapacityWidget";
 import CongestionWidget from "@/widgets/congestion-status/ui/CongestionWidget";
 import PromoVideo from "@/widgets/promo-video/ui/PromoVideo";
+import TimelineSection from "@/widgets/event-timeline/ui/TimelineSection";
 import SparkleDecoration from "@/shared/ui/SparkleDecoration";
-import { timeline } from "@/entities/schedule/model/data";
-
-const HIGHLIGHTS = timeline.slice(0, 4);
 
 export default function HomePage() {
   return (
@@ -19,10 +17,7 @@ export default function HomePage() {
         <SparkleDecoration className="absolute right-4 top-1/2 hidden h-20 w-20 -translate-y-1/2 sm:right-10 sm:block sm:h-28 sm:w-28" delay="-2.5s" />
 
         <div className="relative mx-auto max-w-6xl px-4 py-16 text-center sm:px-6 sm:py-24">
-          <span className="inline-flex items-center rounded-full bg-white/15 px-3 py-1 text-xs font-bold text-white">
-            2026.10.31.(토) - 11.1.(일)
-          </span>
-          <h1 className="mt-4 text-3xl font-black leading-tight sm:text-5xl">2026 전남광주 AI·SW체험한마당</h1>
+          <h1 className="text-3xl font-black leading-tight sm:text-5xl">2026 전남광주 AI·SW체험한마당</h1>
           <p className="mx-auto mt-4 max-w-xl text-sm text-sky-100 sm:text-base">
             학생을 위한 AI·SW 한마당과 교원을 위한 미래교육박람회가 한자리에.
             <br />
@@ -93,23 +88,13 @@ export default function HomePage() {
 
       <section className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
         <div className="flex items-center justify-between gap-3">
-          <h2 className="text-lg font-bold text-gray-900">행사 일정 미리보기</h2>
+          <h2 className="text-lg font-bold text-gray-900">행사 일정</h2>
           <Link href="/guide/schedule" className="shrink-0 text-sm font-semibold text-brand hover:underline">
             전체 일정표 보기 →
           </Link>
         </div>
-        <div className="mt-4 flex flex-col divide-y divide-gray-100 rounded-2xl border border-gray-100 bg-white">
-          {HIGHLIGHTS.map((item) => (
-            <div key={`${item.date}-${item.time}-${item.title}`} className="flex items-center gap-4 px-5 py-4">
-              <span className="w-24 shrink-0 rounded-full bg-brand-light px-2 py-1.5 text-center text-xs font-bold text-brand">{item.date}</span>
-              <div className="min-w-0 flex-1">
-                <p className="truncate text-sm font-semibold text-gray-800">{item.title}</p>
-                <p className="mt-0.5 truncate text-xs text-gray-400">
-                  {item.time} · {item.location}
-                </p>
-              </div>
-            </div>
-          ))}
+        <div className="mt-4">
+          <TimelineSection />
         </div>
       </section>
     </div>
