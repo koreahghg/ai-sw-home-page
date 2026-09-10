@@ -12,7 +12,7 @@ export default function StudentsAiTourPage() {
       />
 
       <div className="flex flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">
-        <LocalNav title="학생마당" items={studentsNavItems} />
+        <LocalNav title="학생마당 (AI·SW교육)" items={studentsNavItems} />
 
         <div className="min-w-0 flex-1">
           <h2 className="text-lg font-bold text-gray-900">AI교육원 탐방 (오디세이 투어)</h2>

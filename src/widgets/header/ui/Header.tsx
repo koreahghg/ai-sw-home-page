@@ -50,7 +50,8 @@ export default function Header() {
         <div className="flex items-center gap-6">
           <nav className="hidden items-center gap-8 md:flex">
             {NAV_SECTIONS.map((item) => {
-              const active = pathname === item.href || pathname.startsWith(item.href + "/");
+              const matchBase = item.matchPrefix ?? item.href;
+              const active = pathname === matchBase || pathname.startsWith(matchBase + "/");
               return (
                 <Link
                   key={item.href}

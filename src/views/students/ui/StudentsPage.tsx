@@ -9,7 +9,7 @@ export default function StudentsPage() {
       <PageHero title="체험 부스 안내" desc="AI·SW 한마당 - 체험 부스부터 골든벨, AI교육원 탐방까지 학생들을 위한 프로그램을 확인하세요." />
 
       <div className="flex flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">
-        <LocalNav title="학생마당" items={studentsNavItems} />
+        <LocalNav title="학생마당 (AI·SW교육)" items={studentsNavItems} />
 
         <div className="min-w-0 flex-1">
           <h2 className="text-lg font-bold text-gray-900">체험 부스 안내</h2>

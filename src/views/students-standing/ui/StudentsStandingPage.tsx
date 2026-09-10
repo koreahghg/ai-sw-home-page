@@ -8,7 +8,7 @@ export default function StudentsStandingPage() {
       <PageHero title="상설 체험" desc="사전신청 없이 누구나 자유롭게 참여할 수 있는 상시 운영 체험존입니다." />
 
       <div className="flex flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">
-        <LocalNav title="학생마당" items={studentsNavItems} />
+        <LocalNav title="학생마당 (AI·SW교육)" items={studentsNavItems} />
 
         <div className="min-w-0 flex-1">
           <h2 className="text-lg font-bold text-gray-900">상설 체험</h2>
