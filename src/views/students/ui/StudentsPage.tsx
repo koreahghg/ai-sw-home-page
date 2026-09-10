@@ -1,13 +1,7 @@
 import PageHero from "@/shared/ui/PageHero";
 import LocalNav from "@/widgets/local-nav/ui/LocalNav";
 import { studentsNavItems } from "@/shared/config/students-nav";
-
-const BOOTHS = [
-  { title: "AI 드로잉 체험", desc: "생성형 AI로 나만의 캐릭터 그리기", zone: "1층 A구역" },
-  { title: "코딩 로봇 챌린지", desc: "블록 코딩으로 미로 탈출 로봇 조종", zone: "1층 B구역" },
-  { title: "AI 음성인식 게임", desc: "음성으로 명령하는 미니게임 체험", zone: "2층 C구역" },
-  { title: "VR 우주 탐험", desc: "VR 기기로 떠나는 가상 우주여행", zone: "2층 D구역" },
-];
+import { booths } from "@/entities/booth/model/data";
 
 export default function StudentsPage() {
   return (
@@ -19,18 +13,37 @@ export default function StudentsPage() {
 
         <div className="min-w-0 flex-1">
           <h2 className="text-lg font-bold text-gray-900">체험 부스 안내</h2>
-          <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {BOOTHS.map((b) => (
-              <div key={b.title} className="rounded-2xl border border-gray-100 bg-white p-5 shadow-sm">
-                <div className="flex items-center justify-between">
-                  <p className="text-sm font-bold text-gray-900">{b.title}</p>
-                  <span className="rounded-full bg-sky-50 px-2.5 py-1 text-[11px] font-semibold text-sky-700">
-                    {b.zone}
-                  </span>
-                </div>
-                <p className="mt-2 text-sm text-gray-500">{b.desc}</p>
-              </div>
-            ))}
+
+          <div className="mt-4 overflow-hidden rounded-2xl border border-gray-300">
+            <table className="w-full table-fixed border-collapse text-left text-sm">
+              <colgroup>
+                <col className="w-[10%]" />
+                <col className="w-[20%]" />
+                <col className="w-[12%]" />
+                <col className="w-[16%]" />
+                <col className="w-[42%]" />
+              </colgroup>
+              <thead>
+                <tr className="bg-brand text-white">
+                  <th className="border-r border-white/20 px-4 py-3 text-center font-bold">부스번호</th>
+                  <th className="border-r border-white/20 px-4 py-3 text-center font-bold">부스 이름</th>
+                  <th className="border-r border-white/20 px-4 py-3 text-center font-bold">유형</th>
+                  <th className="border-r border-white/20 px-4 py-3 text-center font-bold">참여대상</th>
+                  <th className="px-4 py-3 text-center font-bold">프로그램 제목</th>
+                </tr>
+              </thead>
+              <tbody>
+                {booths.map((b) => (
+                  <tr key={b.no} className="border-t border-gray-300">
+                    <td className="border-r border-gray-300 bg-brand-light px-4 py-3 text-center font-bold text-gray-900">{b.no}</td>
+                    <td className="border-r border-gray-300 px-4 py-3 text-center text-gray-700">{b.name}</td>
+                    <td className="border-r border-gray-300 px-4 py-3 text-center text-gray-700">{b.type}</td>
+                    <td className="border-r border-gray-300 px-4 py-3 text-center text-gray-700">{b.audience}</td>
+                    <td className="px-4 py-3 text-center text-gray-700">{b.title}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </div>

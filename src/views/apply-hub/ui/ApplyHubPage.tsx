@@ -5,20 +5,20 @@ import { applyNavItems } from "@/shared/config/apply-nav";
 
 const STUDENT_APPLY = [
   { href: "/apply/register", title: "학생 사전등록", desc: "오전/오후 시간대 선택, 보호자 동반 최대 5명", tag: "학생" },
-  { href: "/apply/golden-bell", title: "AI·SW 골든벨 신청", desc: "초등부 · 중등부", tag: "학생" },
-  { href: "/apply/ai-tour", title: "AI교육원 탐방 신청", desc: "회차별 40명 한정", tag: "학생" },
+  { href: "/apply/golden-bell", title: "AI·SW 골든벨 신청", desc: "초등부 · 중등부 각 50명", tag: "학생" },
+  { href: "/apply/ai-tour", title: "AI교육원 탐방 신청", desc: "회차별 2팀 · 팀당 8명 한정", tag: "학생" },
 ];
 
 const TEACHER_APPLY = [
-  { href: "/apply/teacher-training", title: "교사 연수 신청", desc: "3개 프로그램 중 선택", tag: "교사" },
-  { href: "/apply/teacher-lecture", title: "미래교육 특강 신청", desc: "세미나실 운영", tag: "교사" },
+  { href: "/apply/teacher-training", title: "교사 연수 신청", desc: "삼성·애플·구글 3개 세션 중 선택", tag: "교사" },
+  { href: "/apply/teacher-lecture", title: "미래교육 특강 신청", desc: "10.31(토) 오전 11시, 선착순 300명", tag: "교사" },
 ];
 
 function ApplyCard({ href, title, desc, tag }: { href: string; title: string; desc: string; tag: string }) {
   return (
     <Link
       href={href}
-      className="flex items-center justify-between rounded-2xl border border-gray-100 bg-white p-5 shadow-sm transition hover:border-brand hover:shadow-md"
+      className="flex items-center justify-between rounded-2xl border border-gray-100 bg-white p-5 transition hover:border-brand hover:bg-brand-light"
     >
       <div>
         <span
@@ -47,7 +47,7 @@ export default function ApplyHubPage() {
         <div className="min-w-0 flex-1">
           <Link
             href="/apply/check"
-            className="flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-gray-900 p-5 text-white shadow-sm sm:p-6"
+            className="flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-gray-900 p-5 text-white sm:p-6"
           >
             <div>
               <p className="text-sm font-bold">📋 신청 내역 조회 · 취소</p>

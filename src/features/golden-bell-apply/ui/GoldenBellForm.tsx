@@ -43,7 +43,7 @@ export default function GoldenBellForm() {
           type="button"
           onClick={() => setDivision("elementary")}
           className={`flex-1 rounded-full py-2 font-semibold transition ${
-            division === "elementary" ? "bg-white text-brand shadow-sm" : "text-gray-500"
+            division === "elementary" ? "bg-white text-brand" : "text-gray-500"
           }`}
         >
           초등부
@@ -52,7 +52,7 @@ export default function GoldenBellForm() {
           type="button"
           onClick={() => setDivision("secondary")}
           className={`flex-1 rounded-full py-2 font-semibold transition ${
-            division === "secondary" ? "bg-white text-brand shadow-sm" : "text-gray-500"
+            division === "secondary" ? "bg-white text-brand" : "text-gray-500"
           }`}
         >
           중등부
@@ -64,7 +64,7 @@ export default function GoldenBellForm() {
           e.preventDefault();
           setSubmitted(true);
         }}
-        className="mt-6 space-y-5 rounded-2xl border border-gray-100 bg-white p-6 shadow-sm"
+        className="mt-6 space-y-5 rounded-2xl border border-gray-100 bg-white p-6"
       >
         {division === "secondary" && (
           <Field label="학교급" required>

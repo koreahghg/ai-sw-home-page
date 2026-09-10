@@ -82,7 +82,7 @@ export default function Header() {
           openDesktopKey ? "pointer-events-auto opacity-100 duration-200" : "pointer-events-none opacity-0 duration-500"
         }`}
       >
-        <div className="shadow-[0_24px_48px_-24px_rgba(15,23,42,0.16)]">
+        <div className="border-b border-gray-100">
           <div key={openSeq} className="grid grid-cols-5 gap-8 bg-white px-4 py-8 sm:px-6">
             {NAV_SECTIONS.map((section) => (
               <div key={section.key}>

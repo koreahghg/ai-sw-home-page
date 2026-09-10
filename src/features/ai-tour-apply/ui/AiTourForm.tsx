@@ -9,7 +9,7 @@ export default function AiTourForm() {
     grade: "",
     name: "",
     phone: "",
-    date: "10.31(토)",
+    time: "10:00~11:00",
     guardianAgree: false,
   });
   const [submitted, setSubmitted] = useState(false);
@@ -20,7 +20,7 @@ export default function AiTourForm() {
   if (submitted) {
     return (
       <div>
-        <SuccessPanel title="탐방 신청이 완료되었습니다" desc={`${form.date} 오전 회차 · ${form.name}님`} />
+        <SuccessPanel title="탐방 신청이 완료되었습니다" desc={`10.31(토) ${form.time} 회차 · ${form.name}님`} />
       </div>
     );
   }
@@ -31,12 +31,13 @@ export default function AiTourForm() {
         e.preventDefault();
         setSubmitted(true);
       }}
-      className="space-y-5 rounded-2xl border border-gray-100 bg-white p-6 shadow-sm"
+      className="space-y-5 rounded-2xl border border-gray-100 bg-white p-6"
     >
-      <Field label="희망 일자" required>
-        <select value={form.date} onChange={(e) => set("date", e.target.value)} className={inputClass}>
-          <option value="10.31(토)">10.31(토) 오전</option>
-          <option value="11.1(일)">11.1(일) 오전</option>
+      <Field label="희망 회차 (10.31(토), 팀당 8명)" required>
+        <select value={form.time} onChange={(e) => set("time", e.target.value)} className={inputClass}>
+          <option value="10:00~11:00">10:00~11:00</option>
+          <option value="13:30~14:30">13:30~14:30</option>
+          <option value="15:00~16:00">15:00~16:00</option>
         </select>
       </Field>
       <Field label="학교" required>

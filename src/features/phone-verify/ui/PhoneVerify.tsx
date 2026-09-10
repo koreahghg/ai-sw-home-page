@@ -38,7 +38,7 @@ export default function PhoneVerify({
           type="button"
           disabled={verified || phone.length < 10}
           onClick={() => setSent(true)}
-          className="shrink-0 rounded-lg bg-gray-800 px-4 py-2.5 text-xs font-semibold text-white transition hover:bg-gray-700 disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-gray-400"
+          className="shrink-0 rounded-lg bg-brand px-4 py-2.5 text-xs font-semibold text-white transition hover:bg-brand-dark disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-gray-400"
         >
           인증번호 받기
         </button>

@@ -1,12 +1,7 @@
 import PageHero from "@/shared/ui/PageHero";
 import LocalNav from "@/widgets/local-nav/ui/LocalNav";
 import { teachersNavItems } from "@/shared/config/teachers-nav";
-
-const BOOTHS = [
-  { title: "AI 디지털교과서 체험존", desc: "실제 수업에 활용 가능한 AI 디지털교과서 시연" },
-  { title: "에듀테크 솔루션관", desc: "학습 분석·평가 도구 등 최신 에듀테크 전시" },
-  { title: "교육 정책 상담 부스", desc: "미래교육 정책 관련 1:1 상담" },
-];
+import { teacherBooths } from "@/entities/booth/model/data";
 
 export default function TeachersPage() {
   return (
@@ -18,13 +13,37 @@ export default function TeachersPage() {
 
         <div className="min-w-0 flex-1">
           <h2 className="text-lg font-bold text-gray-900">부스 안내</h2>
-          <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
-            {BOOTHS.map((b) => (
-              <div key={b.title} className="rounded-2xl border border-gray-100 bg-white p-5 shadow-sm">
-                <p className="text-sm font-bold text-gray-900">{b.title}</p>
-                <p className="mt-2 text-sm text-gray-500">{b.desc}</p>
-              </div>
-            ))}
+
+          <div className="mt-4 overflow-hidden rounded-2xl border border-gray-300">
+            <table className="w-full table-fixed border-collapse text-left text-sm">
+              <colgroup>
+                <col className="w-[10%]" />
+                <col className="w-[20%]" />
+                <col className="w-[12%]" />
+                <col className="w-[16%]" />
+                <col className="w-[42%]" />
+              </colgroup>
+              <thead>
+                <tr className="bg-brand text-white">
+                  <th className="border-r border-white/20 px-4 py-3 text-center font-bold">부스번호</th>
+                  <th className="border-r border-white/20 px-4 py-3 text-center font-bold">부스 이름</th>
+                  <th className="border-r border-white/20 px-4 py-3 text-center font-bold">유형</th>
+                  <th className="border-r border-white/20 px-4 py-3 text-center font-bold">참여대상</th>
+                  <th className="px-4 py-3 text-center font-bold">프로그램 제목</th>
+                </tr>
+              </thead>
+              <tbody>
+                {teacherBooths.map((b) => (
+                  <tr key={b.no} className="border-t border-gray-300">
+                    <td className="border-r border-gray-300 bg-brand-light px-4 py-3 text-center font-bold text-gray-900">{b.no}</td>
+                    <td className="border-r border-gray-300 px-4 py-3 text-center text-gray-700">{b.name}</td>
+                    <td className="border-r border-gray-300 px-4 py-3 text-center text-gray-700">{b.type}</td>
+                    <td className="border-r border-gray-300 px-4 py-3 text-center text-gray-700">{b.audience}</td>
+                    <td className="px-4 py-3 text-center text-gray-700">{b.title}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </div>

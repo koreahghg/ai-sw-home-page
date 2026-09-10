@@ -32,7 +32,7 @@ export default function TeacherLectureForm() {
       }}
       className="space-y-6"
     >
-      <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
+      <div className="rounded-2xl border border-gray-100 bg-white p-6">
         <h3 className="text-sm font-bold text-gray-900">특강 선택</h3>
         <div className="mt-4 space-y-2">
           {lectures.map((l) => (
@@ -52,7 +52,7 @@ export default function TeacherLectureForm() {
         </div>
       </div>
 
-      <div className="rounded-2xl border border-gray-100 bg-white p-6 space-y-5 shadow-sm">
+      <div className="rounded-2xl border border-gray-100 bg-white p-6 space-y-5">
         <Field label="이름" required>
           <input value={form.name} onChange={(e) => set("name", e.target.value)} className={inputClass} />
         </Field>

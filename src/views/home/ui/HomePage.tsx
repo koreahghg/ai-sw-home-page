@@ -22,7 +22,7 @@ export default function HomePage() {
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               href="/apply/register"
-              className="rounded-full bg-white px-6 py-3 text-sm font-bold text-brand shadow-sm transition hover:bg-sky-50"
+              className="rounded-full bg-white px-6 py-3 text-sm font-bold text-brand transition hover:bg-sky-50"
             >
               👦 학생·학부모 사전등록
             </Link>

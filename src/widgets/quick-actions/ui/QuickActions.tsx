@@ -29,7 +29,7 @@ function QuickCard({
       : "from-violet-500 to-violet-600";
 
   return (
-    <div className="flex-1 rounded-2xl border border-gray-100 bg-white p-5 shadow-sm sm:p-6">
+    <div className="flex-1 rounded-2xl border border-gray-100 bg-white p-5 sm:p-6">
       <div className={`inline-flex items-center gap-2 rounded-full bg-gradient-to-r ${toneStyle} px-3 py-1.5 text-sm font-bold text-white`}>
         <span>{emoji}</span>
         {title}

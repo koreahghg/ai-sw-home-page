@@ -14,7 +14,7 @@ export default function CapacityWidget() {
   );
 
   return (
-    <div className="rounded-2xl border border-gray-100 bg-white p-5 shadow-sm sm:p-6">
+    <div className="rounded-2xl border border-gray-100 bg-white p-5 sm:p-6">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
           <h3 className="text-base font-bold text-gray-900">실시간 접수 현황</h3>
@@ -26,7 +26,7 @@ export default function CapacityWidget() {
               key={d}
               onClick={() => setDate(d)}
               className={`rounded-full px-3 py-1.5 font-medium transition ${
-                date === d ? "bg-white text-brand shadow-sm" : "text-gray-500 hover:text-gray-700"
+                date === d ? "bg-white text-brand" : "text-gray-500 hover:text-gray-700"
               }`}
             >
               {d}

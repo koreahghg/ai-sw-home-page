@@ -6,7 +6,10 @@ import { applyNavItems } from "@/shared/config/apply-nav";
 export default function ApplyRegisterPage() {
   return (
     <div>
-      <PageHero title="학생 사전등록" desc="AI·SW 한마당 방문을 위한 사전등록 - 보호자 1인 기준 최대 5명까지 함께 등록할 수 있습니다." />
+      <PageHero
+        title="학생 사전등록"
+        desc="AI·SW 한마당 방문을 위한 사전등록 - 보호자 1인 기준 최대 5명까지 함께 등록할 수 있습니다. 학생·일반시민 합산 1,000명 한정이며, 교사는 인원 제한이 없습니다."
+      />
 
       <div className="flex flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">
         <LocalNav title="사전신청" items={applyNavItems} />

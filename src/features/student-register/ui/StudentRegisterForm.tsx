@@ -43,7 +43,7 @@ export default function StudentRegisterForm() {
       }}
       className="space-y-6"
     >
-      <div className="rounded-2xl border border-gray-100 bg-white p-6 space-y-5 shadow-sm">
+      <div className="rounded-2xl border border-gray-100 bg-white p-6 space-y-5">
         <PhoneVerify phone={phone} onPhoneChange={setPhone} verified={verified} onVerified={setVerified} />
 
         <Field label="지역" required>
@@ -73,7 +73,7 @@ export default function StudentRegisterForm() {
         </div>
       </div>
 
-      <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
+      <div className="rounded-2xl border border-gray-100 bg-white p-6">
         <div className="flex items-center justify-between">
           <h3 className="text-sm font-bold text-gray-900">참가자 정보 ({participants.length}/5)</h3>
           {participants.length < 5 && (
