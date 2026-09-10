@@ -69,7 +69,7 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <button
               type="button"
-              className="flex h-8 w-8 items-center justify-center text-gray-700 transition hover:text-brand"
+              className="flex h-11 w-11 items-center justify-center text-gray-700 transition hover:text-brand"
               onClick={(e) => {
                 e.stopPropagation();
                 setSearchOpen((v) => !v);
@@ -84,7 +84,7 @@ export default function Header() {
 
             <button
               type="button"
-              className="flex h-8 w-8 items-center justify-center text-gray-700 transition hover:text-brand"
+              className="flex h-11 w-11 items-center justify-center text-gray-700 transition hover:text-brand"
               onClick={(e) => {
                 e.stopPropagation();
                 if (openDesktopKey) {

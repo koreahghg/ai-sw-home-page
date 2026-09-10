@@ -7,7 +7,7 @@ export default function NoticeParkingPage() {
     <div>
       <PageHero title="주차 안내" desc="행사장 주차 안내를 확인하세요." />
 
-      <div className="flex flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">
+      <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">
         <LocalNav title="알림마당" items={noticeNavItems} />
 
         <div className="min-w-0 flex-1 rounded-2xl border border-gray-100 bg-white p-6">

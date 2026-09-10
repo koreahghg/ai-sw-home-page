@@ -8,14 +8,15 @@ export default function StudentsPage() {
     <div>
       <PageHero title="체험 부스 안내" desc="AI·SW 한마당 - 체험 부스부터 골든벨, AI교육원 탐방까지 학생들을 위한 프로그램을 확인하세요." />
 
-      <div className="flex flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">
+      <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">
         <LocalNav title="학생마당 (AI·SW교육)" items={studentsNavItems} />
 
         <div className="min-w-0 flex-1">
           <h2 className="text-lg font-bold text-gray-900">체험 부스 안내</h2>
 
           <div className="mt-4 overflow-hidden rounded-2xl border border-gray-300">
-            <table className="w-full table-fixed border-collapse text-left text-sm">
+            <div className="overflow-x-auto">
+            <table className="w-full min-w-[640px] table-fixed border-collapse text-left text-sm">
               <colgroup>
                 <col className="w-[10%]" />
                 <col className="w-[20%]" />
@@ -44,6 +45,7 @@ export default function StudentsPage() {
                 ))}
               </tbody>
             </table>
+            </div>
           </div>
         </div>
       </div>

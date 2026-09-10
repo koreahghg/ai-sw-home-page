@@ -18,7 +18,7 @@ export default function GuideOverviewPage() {
     <div>
       <PageHero title="행사 개요" desc="행사 개요부터 오시는 길까지, 2026 전남광주통합특별시교육청 AI·SW체험한마당의 모든 기본 정보를 확인하세요." />
 
-      <div className="flex flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">
+      <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">
         <LocalNav title="박람회 안내" items={guideNavItems} />
 
         <div className="min-w-0 flex-1">

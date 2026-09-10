@@ -13,7 +13,7 @@ export default function NoticeFaqPage() {
     <div>
       <PageHero title="FAQ" desc="자주 묻는 질문을 확인하세요." />
 
-      <div className="flex flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">
+      <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">
         <LocalNav title="알림마당" items={noticeNavItems} />
 
         <div className="min-w-0 flex-1">

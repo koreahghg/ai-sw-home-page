@@ -7,7 +7,7 @@ export default function GuideDirectionsPage() {
     <div>
       <PageHero title="오시는 길" desc="대중교통·자가용 등 행사장까지 오시는 방법을 안내합니다." />
 
-      <div className="flex flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">
+      <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">
         <LocalNav title="박람회 안내" items={guideNavItems} />
 
         <div className="min-w-0 flex-1">

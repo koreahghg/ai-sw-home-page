@@ -8,7 +8,7 @@ export default function TeachersLecturePage() {
     <div>
       <PageHero title="미래교육 특강" desc="10.31(토) 오전 11시 진행되는 미래교육 특강입니다. 선착순 300명 참여 가능합니다." />
 
-      <div className="flex flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">
+      <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">
         <LocalNav title="교사마당 (미래교육)" items={teachersNavItems} />
 
         <div className="min-w-0 flex-1">

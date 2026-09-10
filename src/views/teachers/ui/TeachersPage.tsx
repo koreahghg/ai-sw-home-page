@@ -8,14 +8,15 @@ export default function TeachersPage() {
     <div>
       <PageHero title="부스 안내" desc="미래교육박람회 - 교원을 위한 부스 전시, 연수, 특강 프로그램을 확인하세요." />
 
-      <div className="flex flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">
+      <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">
         <LocalNav title="교사마당 (미래교육)" items={teachersNavItems} />
 
         <div className="min-w-0 flex-1">
           <h2 className="text-lg font-bold text-gray-900">부스 안내</h2>
 
           <div className="mt-4 overflow-hidden rounded-2xl border border-gray-300">
-            <table className="w-full table-fixed border-collapse text-left text-sm">
+            <div className="overflow-x-auto">
+            <table className="w-full min-w-[640px] table-fixed border-collapse text-left text-sm">
               <colgroup>
                 <col className="w-[10%]" />
                 <col className="w-[20%]" />
@@ -44,6 +45,7 @@ export default function TeachersPage() {
                 ))}
               </tbody>
             </table>
+            </div>
           </div>
         </div>
       </div>

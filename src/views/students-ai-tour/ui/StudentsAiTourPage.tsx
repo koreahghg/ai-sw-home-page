@@ -11,7 +11,7 @@ export default function StudentsAiTourPage() {
         desc="실제 AI교육원 시설을 둘러보는 견학 프로그램입니다. 10.31(토) 3개 회차로 운영되며 회차별 2팀, 팀당 8명 한정입니다."
       />
 
-      <div className="flex flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">
+      <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">
         <LocalNav title="학생마당 (AI·SW교육)" items={studentsNavItems} />
 
         <div className="min-w-0 flex-1">

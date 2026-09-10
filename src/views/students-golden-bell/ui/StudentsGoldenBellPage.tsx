@@ -8,7 +8,7 @@ export default function StudentsGoldenBellPage() {
     <div>
       <PageHero title="AI·SW 골든벨" desc="초등부 · 중등부로 나누어 진행되는 퀴즈 배틀. 우승팀에게는 상품이 제공됩니다." />
 
-      <div className="flex flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">
+      <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">
         <LocalNav title="학생마당 (AI·SW교육)" items={studentsNavItems} />
 
         <div className="min-w-0 flex-1">

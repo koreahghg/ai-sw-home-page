@@ -9,7 +9,7 @@ export default function TeachersTrainingPage() {
     <div>
       <PageHero title="교사 연수" desc="현직 교원을 위한 연수 프로그램입니다. 삼성·애플·구글 3개 세션으로 운영되며 세부 일정은 추후 안내됩니다." />
 
-      <div className="flex flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">
+      <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">
         <LocalNav title="교사마당 (미래교육)" items={teachersNavItems} />
 
         <div className="min-w-0 flex-1">
