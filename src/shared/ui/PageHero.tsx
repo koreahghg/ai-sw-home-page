@@ -4,7 +4,7 @@ export default function PageHero({ title, desc }: { title: string; desc: string 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-brand-dark to-brand text-white">
       <BackgroundLines
-        className="pointer-events-none absolute inset-x-0 top-1/2 w-full min-w-[1600px] -translate-y-1/2 opacity-30"
+        className="pointer-events-none absolute left-1/2 top-1/2 w-[2400px] max-w-none -translate-x-1/2 -translate-y-1/2 opacity-30"
         color="#FFFFFF"
       />
       <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-white/25 blur-3xl" />
