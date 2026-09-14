@@ -1,9 +1,6 @@
 import Link from "next/link";
-import CapacityWidget from "@/widgets/capacity-status/ui/CapacityWidget";
-import CongestionWidget from "@/widgets/congestion-status/ui/CongestionWidget";
 import PromoVideo from "@/widgets/promo-video/ui/PromoVideo";
 import TimelineSection from "@/widgets/event-timeline/ui/TimelineSection";
-import EventStatsRow from "@/widgets/event-stats/ui/EventStatsRow";
 import QuickApplyGroups from "@/widgets/quick-apply/ui/QuickApplyGroups";
 import BackgroundLines from "@/shared/ui/BackgroundLines";
 
@@ -17,6 +14,10 @@ export default function HomePage() {
   return (
     <div>
       <section className="relative overflow-hidden bg-gradient-to-br from-brand-dark to-brand text-white">
+        <BackgroundLines
+          className="pointer-events-none absolute inset-x-0 top-1/2 w-full min-w-[1600px] -translate-y-1/2 opacity-30"
+          color="#FFFFFF"
+        />
         <div className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-white/20 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-28 -left-20 h-72 w-72 rounded-full bg-white/10 blur-3xl" />
 
@@ -64,10 +65,6 @@ export default function HomePage() {
       <div className="relative overflow-hidden">
         <BackgroundLines className="pointer-events-none absolute inset-x-0 top-0 -z-10 w-full min-w-[1600px]" />
 
-        <section className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
-          <EventStatsRow />
-        </section>
-
         <section className="mx-auto max-w-6xl px-4 py-4 sm:px-6">
           <h2 className="text-lg font-bold text-gray-900">지금, 미래를 만나보세요!</h2>
           <p className="mt-1 text-sm text-gray-500">
@@ -75,14 +72,6 @@ export default function HomePage() {
           </p>
           <div className="mt-4">
             <QuickApplyGroups />
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
-          <h2 className="text-lg font-bold text-gray-900">실시간 상세 현황</h2>
-          <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-2">
-            <CapacityWidget />
-            <CongestionWidget />
           </div>
         </section>
 

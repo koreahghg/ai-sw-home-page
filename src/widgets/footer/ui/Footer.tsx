@@ -8,6 +8,10 @@ const ORGANIZERS = [
   { role: "주관", Logo: Host },
 ];
 
+const FOOTER_ONLY_LINKS: Record<string, { key: string; href: string; label: string }[]> = {
+  guide: [{ key: "status", href: "/guide/status", label: "실시간 현황" }],
+};
+
 export default function Footer() {
   return (
     <footer className="mt-16 bg-[#212121] text-white">
@@ -26,7 +30,7 @@ export default function Footer() {
             <div key={col.key}>
               <p className="text-sm font-bold text-white">{col.label}</p>
               <ul className="mt-3 space-y-2">
-                {col.sub.map((link) => (
+                {[...col.sub, ...(FOOTER_ONLY_LINKS[col.key] ?? [])].map((link) => (
                   <li key={link.key}>
                     <Link href={link.href} className="text-sm text-white/60 hover:text-white">
                       {link.label}

@@ -1,6 +1,12 @@
+import BackgroundLines from "@/shared/ui/BackgroundLines";
+
 export default function PageHero({ title, desc }: { title: string; desc: string }) {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-brand-dark to-brand text-white">
+      <BackgroundLines
+        className="pointer-events-none absolute inset-x-0 top-1/2 w-full min-w-[1600px] -translate-y-1/2 opacity-30"
+        color="#FFFFFF"
+      />
       <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-white/25 blur-3xl" />
       <svg
         xmlns="http://www.w3.org/2000/svg"
