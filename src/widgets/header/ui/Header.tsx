@@ -159,13 +159,15 @@ export default function Header() {
                     <p className="text-xs font-medium text-gray-400">주차장 안내</p>
                     <ul className="mt-4 flex flex-col gap-1">
                       <li className="animate-[nav-item-in_0.5s_ease-out_both]">
-                        <Link
-                          href="/notice/parking"
+                        <a
+                          href="/"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           onClick={() => setOpenDesktopKey(null)}
                           className="block text-sm font-semibold text-gray-800 transition hover:text-brand"
                         >
                           혼잡도: {parkingCongestionLevel}
-                        </Link>
+                        </a>
                       </li>
                     </ul>
                   </div>
