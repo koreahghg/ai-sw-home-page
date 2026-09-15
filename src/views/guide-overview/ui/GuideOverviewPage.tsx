@@ -29,7 +29,7 @@ export default function GuideOverviewPage() {
               {OVERVIEW.map((row) => (
                 <div key={row.label} className="contents">
                   <dt>
-                    <span className="inline-flex w-full items-center justify-center whitespace-nowrap rounded-full bg-brand px-10 py-2 text-sm font-bold text-white">
+                    <span className="inline-flex w-full items-center justify-center whitespace-nowrap rounded-full bg-brand px-5 py-1.5 text-xs font-bold text-white">
                       {row.label}
                     </span>
                   </dt>
