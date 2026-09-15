@@ -35,7 +35,7 @@ export default function Header() {
         onMouseLeave={closeOnHoverOut}
         onClick={() => setOpenDesktopKey(null)}
       >
-        <div className="relative flex items-center justify-between px-4 py-2.5 sm:px-6">
+        <div className="relative mx-auto flex max-w-6xl items-center justify-between px-4 py-2 sm:px-6">
           <Link
             href="/"
             className="flex items-center"
@@ -44,7 +44,7 @@ export default function Header() {
               if (pathname === "/") window.scrollTo({ top: 0, behavior: "smooth" });
             }}
           >
-            <Image src="/lg.png" alt="2026 전남광주 AI·SW체험한마당" width={643} height={154} className="h-9 w-auto sm:h-10" priority />
+            <Image src="/lg.png" alt="2026 전남광주 AI·SW체험한마당" width={643} height={154} className="h-8 w-auto sm:h-9" priority />
           </Link>
 
           <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 md:flex">
@@ -56,7 +56,7 @@ export default function Header() {
                   key={item.href}
                   href={item.href}
                   onMouseEnter={() => openDesktopMenu(item.key)}
-                  className={`block rounded-full px-2 py-1.5 text-base font-medium transition duration-300 ${
+                  className={`block rounded-full px-2 py-1.5 text-sm font-medium transition duration-300 ${
                     active ? "text-gray-900 font-semibold" : "text-gray-600 hover:text-gray-900 hover:font-semibold"
                   }`}
                 >
@@ -69,14 +69,14 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <button
               type="button"
-              className="flex h-11 w-11 items-center justify-center text-gray-700 transition hover:text-brand"
+              className="flex h-10 w-10 items-center justify-center text-gray-700 transition hover:text-brand"
               onClick={(e) => {
                 e.stopPropagation();
                 setSearchOpen((v) => !v);
               }}
               aria-label={searchOpen ? "검색 닫기" : "검색 열기"}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-6 w-6">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-5 w-5">
                 <circle cx="11" cy="11" r="7" strokeLinecap="round" strokeLinejoin="round" />
                 <path d="M21 21l-4.3-4.3" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
@@ -84,7 +84,7 @@ export default function Header() {
 
             <button
               type="button"
-              className="flex h-11 w-11 items-center justify-center text-gray-700 transition hover:text-brand"
+              className="flex h-10 w-10 items-center justify-center text-gray-700 transition hover:text-brand"
               onClick={(e) => {
                 e.stopPropagation();
                 if (openDesktopKey) {
@@ -96,11 +96,11 @@ export default function Header() {
               aria-label={openDesktopKey ? "메뉴 닫기" : "메뉴 열기"}
             >
               {openDesktopKey ? (
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-6 w-6">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-5 w-5">
                   <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               ) : (
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-6 w-6">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-5 w-5">
                   <path d="M4 7h16M4 12h16M4 17h16" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               )}
@@ -115,16 +115,16 @@ export default function Header() {
         >
           <div>
             <div key={openSeq} className="grid grid-cols-2 gap-6 bg-white px-4 py-8 sm:grid-cols-3 sm:px-6 md:grid-cols-5 md:gap-8">
-              {NAV_SECTIONS.map((section) => (
+              {(openDesktopKey === "menu" ? NAV_SECTIONS : NAV_SECTIONS.filter((section) => section.key === openDesktopKey)).map((section) => (
                 <div key={section.key}>
-                  <p className="text-sm font-medium text-gray-400">{section.label}</p>
+                  <p className="text-xs font-medium text-gray-400">{section.label}</p>
                   <ul className="mt-4 flex flex-col gap-1">
                     {section.sub.map((s, i) => (
                       <li key={s.key} className="animate-[nav-item-in_0.5s_ease-out_both]" style={{ animationDelay: `${i * 40}ms` }}>
                         <Link
                           href={s.href}
                           onClick={() => setOpenDesktopKey(null)}
-                          className="block text-base font-semibold text-gray-800 transition hover:text-brand"
+                          className="block text-sm font-semibold text-gray-800 transition hover:text-brand"
                         >
                           {s.label}
                         </Link>

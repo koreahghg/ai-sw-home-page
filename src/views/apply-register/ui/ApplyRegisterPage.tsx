@@ -9,7 +9,7 @@ export default function ApplyRegisterPage() {
     <div>
       <PageHero
         title="학생 사전등록"
-        desc="AI·SW 한마당 방문을 위한 사전등록 - 보호자 1인 기준 최대 5명까지 함께 등록할 수 있습니다. 학생·일반시민 합산 1,000명 한정이며, 교사는 인원 제한이 없습니다."
+        desc="AI·SW 한마당 방문을 위한 사전등록 입니다."
       />
 
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">

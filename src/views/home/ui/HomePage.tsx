@@ -33,7 +33,7 @@ export default function HomePage() {
                 <p className="mt-4 max-w-xl text-sm text-sky-100 sm:text-base">
                   학생을 위한 AI·SW 한마당과 교원을 위한 미래교육박람회가 한자리에.
                   <br />
-                  지금 사전신청하고 줄서지 않고 스마트하게 참여하세요.
+                  지금 사전신청하고 기다림 없이 참여하세요.
                 </p>
               </div>
 

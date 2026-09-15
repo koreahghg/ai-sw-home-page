@@ -65,7 +65,7 @@ export default function HeaderSearch({ open, onClose }: { open: boolean; onClose
             onChange={(e) => setQuery(e.target.value)}
             type="text"
             placeholder="검색어를 입력하세요"
-            className="w-full bg-transparent text-base text-gray-700 outline-none placeholder:text-gray-400"
+            className="w-full bg-transparent text-sm text-gray-700 outline-none placeholder:text-gray-400"
           />
           <button
             type="button"
@@ -79,7 +79,7 @@ export default function HeaderSearch({ open, onClose }: { open: boolean; onClose
         {query.trim() && (
           <div className="mt-2 max-h-80 overflow-y-auto">
             {results.length === 0 ? (
-              <p className="px-4 py-6 text-center text-sm text-gray-400">&ldquo;{query}&rdquo;에 대한 검색 결과가 없습니다.</p>
+              <p className="px-4 py-6 text-center text-xs text-gray-400">&ldquo;{query}&rdquo;에 대한 검색 결과가 없습니다.</p>
             ) : (
               <ul className="flex flex-col gap-1 p-1">
                 {results.map((r) => (
@@ -91,7 +91,7 @@ export default function HeaderSearch({ open, onClose }: { open: boolean; onClose
                     >
                       <span className="mt-0.5 shrink-0 rounded-full bg-brand-light px-2 py-0.5 text-[10px] font-bold text-brand">{r.group}</span>
                       <span className="min-w-0">
-                        <span className="block truncate text-sm font-semibold text-gray-800">{r.title}</span>
+                        <span className="block truncate text-xs font-semibold text-gray-800">{r.title}</span>
                         <span className="block truncate text-xs text-gray-400">{r.desc}</span>
                       </span>
                     </Link>

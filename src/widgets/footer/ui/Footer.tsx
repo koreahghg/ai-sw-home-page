@@ -28,11 +28,11 @@ export default function Footer() {
         <div className="grid grid-cols-2 gap-8 pt-10 sm:grid-cols-5">
           {NAV_SECTIONS.map((col) => (
             <div key={col.key}>
-              <p className="text-sm font-bold text-white">{col.label}</p>
+              <p className="text-xs font-bold text-white">{col.label}</p>
               <ul className="mt-3 space-y-2">
                 {[...col.sub, ...(FOOTER_ONLY_LINKS[col.key] ?? [])].map((link) => (
                   <li key={link.key}>
-                    <Link href={link.href} className="text-sm text-white/60 hover:text-white">
+                    <Link href={link.href} className="text-xs text-white/60 hover:text-white">
                       {link.label}
                     </Link>
                   </li>
@@ -42,7 +42,7 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-10 border-t border-white/10 pt-8 text-center text-sm text-white/60">
+        <div className="mt-10 border-t border-white/10 pt-8 text-center text-xs text-white/60">
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
             <p>주소: 전남광주통합특별시교육청AI교육원</p>
             <p>연락처: 02-0000-0000</p>
