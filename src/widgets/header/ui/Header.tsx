@@ -115,26 +115,47 @@ export default function Header() {
         >
           <div>
             <div className="bg-white">
-              <div key={openSeq} className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-4 py-8 sm:grid-cols-3 sm:px-6 md:grid-cols-5 md:gap-8">
-                {(openDesktopKey === "menu" ? NAV_SECTIONS : NAV_SECTIONS.filter((section) => section.key === openDesktopKey)).map((section) => (
-                  <div key={section.key}>
-                    <p className="text-xs font-medium text-gray-400">{section.label}</p>
-                    <ul className="mt-4 flex flex-col gap-1">
-                      {section.sub.map((s, i) => (
-                        <li key={s.key} className="animate-[nav-item-in_0.5s_ease-out_both]" style={{ animationDelay: `${i * 40}ms` }}>
-                          <Link
-                            href={s.href}
-                            onClick={() => setOpenDesktopKey(null)}
-                            className="block text-sm font-semibold text-gray-800 transition hover:text-brand"
-                          >
-                            {s.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
+              {openDesktopKey === "menu" ? (
+                <div key={openSeq} className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-4 py-8 sm:grid-cols-3 sm:px-6 md:grid-cols-5 md:gap-8">
+                  {NAV_SECTIONS.map((section) => (
+                    <div key={section.key}>
+                      <p className="text-xs font-medium text-gray-400">{section.label}</p>
+                      <ul className="mt-4 flex flex-col gap-1">
+                        {section.sub.map((s, i) => (
+                          <li key={s.key} className="animate-[nav-item-in_0.5s_ease-out_both]" style={{ animationDelay: `${i * 40}ms` }}>
+                            <Link
+                              href={s.href}
+                              onClick={() => setOpenDesktopKey(null)}
+                              className="block text-sm font-semibold text-gray-800 transition hover:text-brand"
+                            >
+                              {s.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div
+                  key={openSeq}
+                  className="mx-auto grid max-w-6xl grid-cols-2 gap-x-8 gap-y-6 px-4 py-8 sm:grid-cols-3 sm:px-6 md:grid-cols-4"
+                >
+                  {NAV_SECTIONS.find((section) => section.key === openDesktopKey)?.sub.map((s) => (
+                    <Link
+                      key={`${openDesktopKey}-${s.key}`}
+                      href={s.href}
+                      onClick={() => setOpenDesktopKey(null)}
+                      className="group block animate-[nav-item-in_0.5s_ease-out_both]"
+                    >
+                      <p className="border-b border-gray-200 pb-2 text-base font-bold text-gray-900 transition group-hover:border-brand group-hover:text-brand">
+                        {s.label}
+                      </p>
+                      {s.desc && <p className="mt-2 text-sm text-gray-500">{s.desc}</p>}
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
 
             <div className="h-100 hidden bg-gradient-to-b from-white to-white/0 md:block" onMouseEnter={closeOnHoverOut} />

@@ -8,6 +8,7 @@ export interface NavSubItem {
   key: string;
   href: string;
   label: string;
+  desc?: string;
 }
 
 export interface NavSection {
@@ -42,7 +43,7 @@ export const NAV_SECTIONS: NavSection[] = [
     href: "/apply/register",
     matchPrefix: "/apply",
     label: "사전신청",
-    sub: applyNavItems.map((item) => ({ key: item.key, href: item.href, label: item.label })),
+    sub: applyNavItems.map((item) => ({ key: item.key, href: item.href, label: item.label, desc: item.desc })),
   },
   {
     key: "notice",
