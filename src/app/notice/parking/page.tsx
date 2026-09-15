@@ -3,8 +3,8 @@ import { buildMetadata } from "@/shared/config/site";
 import NoticeParkingPage from "@/views/notice-parking/ui/NoticeParkingPage";
 
 export const metadata: Metadata = buildMetadata({
-  title: "주차 안내",
-  description: "행사장 주차 안내를 확인하세요.",
+  title: "주차장 안내",
+  description: "행사장 주차장 안내를 확인하세요.",
   path: "/notice/parking",
 });
 

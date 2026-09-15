@@ -26,7 +26,7 @@ export default function Footer() {
             <p>관람관련문의: 02-0000-0000</p>
           </div>
           <p className="mt-4 text-xs text-white/40">
-            Copyright © 2026 전남광주특별시교육청 AI·SW체험한마당. All rights reserved.
+            Copyright © 2026 전남광주특별시교육청 AI미래교육박람회. All rights reserved.
           </p>
         </div>
       </div>

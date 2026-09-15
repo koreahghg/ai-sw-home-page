@@ -15,7 +15,7 @@ export default function PromoVideo() {
       <iframe
         className="h-full w-full"
         src={`https://www.youtube.com/embed/${PROMO_YOUTUBE_ID}`}
-        title="2026 전남광주 AI·SW체험한마당 홍보 영상"
+        title="2026 전남광주통합특별시교육청 AI미래교육박람회 홍보 영상"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
         loading="lazy"

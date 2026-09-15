@@ -8,7 +8,7 @@ import EventStatsRow from "@/widgets/event-stats/ui/EventStatsRow";
 export default function GuideStatusPage() {
   return (
     <div>
-      <PageHero title="실시간 현황" desc="행사장 혼잡도, 주차 안내, 사전등록 현황을 실시간으로 확인하세요." />
+      <PageHero title="실시간 현황" desc="행사장 혼잡도, 주차장 안내, 사전등록 현황을 실시간으로 확인하세요." />
 
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">
         <LocalNav title="박람회 안내" items={guideNavItems} />

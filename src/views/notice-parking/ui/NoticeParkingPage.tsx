@@ -5,7 +5,7 @@ import { noticeNavItems } from "@/shared/config/notice-nav";
 export default function NoticeParkingPage() {
   return (
     <div>
-      <PageHero title="주차 안내" desc="행사장 주차 안내를 확인하세요." />
+      <PageHero title="주차장 안내" desc="행사장 주차장 안내를 확인하세요." />
 
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">
         <LocalNav title="알림마당" items={noticeNavItems} />

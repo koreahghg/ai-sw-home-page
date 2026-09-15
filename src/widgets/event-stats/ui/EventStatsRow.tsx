@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { congestionZones } from "@/entities/congestion/model/data";
 import { capacitySlots } from "@/entities/capacity/model/data";
+import { parkingTotal, parkingRemaining, parkingOccupiedPercent } from "@/entities/parking/model/data";
 
 function StatCard({
   href,
@@ -48,10 +49,6 @@ export default function EventStatsRow() {
   const registerTotal = registerSlots.reduce((sum, s) => sum + s.total, 0);
   const registerPercent = Math.round((registerCurrent / registerTotal) * 100);
 
-  const parkingTotal = 500;
-  const parkingRemaining = 68;
-  const parkingPercent = Math.round(((parkingTotal - parkingRemaining) / parkingTotal) * 100);
-
   return (
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
       <StatCard
@@ -67,10 +64,10 @@ export default function EventStatsRow() {
       <StatCard
         href="/notice/parking"
         icon="🚗"
-        label="주차 안내"
+        label="주차장 안내"
         badge="예시 데이터"
         value={`잔여 ${parkingRemaining}대 / ${parkingTotal}대`}
-        progress={parkingPercent}
+        progress={parkingOccupiedPercent}
         progressColor="bg-brand"
         desc="주차 공간이 한정되어 대중교통 이용을 권장합니다."
       />

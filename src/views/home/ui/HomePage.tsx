@@ -53,10 +53,9 @@ export default function HomePage() {
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-stretch">
             <div className="flex flex-col justify-between">
               <div>
-                <h1 className="text-3xl font-black leading-tight sm:text-5xl">
-                  2026 전남광주
-                  <br />
-                  AI·SW체험한마당
+                <h1 className="font-black leading-tight">
+                  <span className="block text-2xl sm:text-4xl">2026 전남광주통합특별시교육청</span>
+                  <span className="mt-2 block text-3xl sm:mt-3 sm:text-5xl">AI미래교육박람회</span>
                 </h1>
                 <p className="mt-4 max-w-xl text-sm text-sky-100 sm:text-base">
                   학생을 위한 AI·SW 한마당과 교원을 위한 미래교육박람회가 한자리에.
@@ -96,7 +95,7 @@ export default function HomePage() {
         <section className="mx-auto max-w-6xl px-4 py-4 sm:px-6">
           <h2 className="text-lg font-bold text-gray-900">지금, 미래를 만나보세요!</h2>
           <p className="mt-1 text-sm text-gray-500">
-            AI로 연결되는 배움의 장, 2026 전남광주 AI·SW체험한마당. 학생, 교사, 지역사회가 함께 만드는 특별한 경험에 지금 참여하세요.
+            AI로 연결되는 배움의 장, 2026 전남광주통합특별시교육청 AI미래교육박람회. 학생, 교사, 지역사회가 함께 만드는 특별한 경험에 지금 참여하세요.
           </p>
           <div className="mt-4">
             <QuickApplyGroups />

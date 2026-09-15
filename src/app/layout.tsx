@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: SITE_NAME,
   description: SITE_DESCRIPTION,
-  keywords: ["전남광주", "AI·SW체험한마당", "AI SW 박람회", "학생 체험 부스", "골든벨", "교사 연수", "미래교육 특강"],
+  keywords: ["전남광주", "AI미래교육박람회", "AI SW 박람회", "학생 체험 부스", "골든벨", "교사 연수", "미래교육 특강"],
   alternates: { canonical: "/" },
   robots: {
     index: true,

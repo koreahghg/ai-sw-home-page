@@ -6,7 +6,7 @@ import { guideNavItems } from "@/shared/config/guide-nav";
 export default function GuideSchedulePage() {
   return (
     <div>
-      <PageHero title="전체 일정표" desc="2026 전남광주 AI·SW체험한마당의 일자별·시간대별 프로그램 일정을 확인하세요." />
+      <PageHero title="전체 일정표" desc="2026 전남광주통합특별시교육청 AI미래교육박람회의 일자별·시간대별 프로그램 일정을 확인하세요." />
 
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-12 sm:flex-row sm:px-6">
         <LocalNav title="박람회 안내" items={guideNavItems} />

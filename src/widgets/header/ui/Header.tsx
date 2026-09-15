@@ -5,6 +5,8 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useRef, useState } from "react";
 import { NAV_SECTIONS } from "@/shared/config/site-nav";
+import { CONGESTION_STYLE } from "@/entities/congestion/model/data";
+import { parkingCongestionLevel } from "@/entities/parking/model/data";
 import HeaderSearch from "./HeaderSearch";
 
 export default function Header() {
@@ -35,19 +37,19 @@ export default function Header() {
         onMouseLeave={closeOnHoverOut}
         onClick={() => setOpenDesktopKey(null)}
       >
-        <div className="relative mx-auto flex max-w-6xl items-center justify-between px-4 py-2 sm:px-6">
+        <div className="relative mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-2 sm:px-6">
           <Link
             href="/"
-            className="flex items-center"
+            className="flex shrink-0 items-center"
             onClick={() => {
               setOpenDesktopKey(null);
               if (pathname === "/") window.scrollTo({ top: 0, behavior: "smooth" });
             }}
           >
-            <Image src="/lg.png" alt="2026 전남광주 AI·SW체험한마당" width={643} height={154} className="h-8 w-auto sm:h-9" priority />
+            <Image src="/lg.png" alt="2026 전남광주통합특별시교육청 AI미래교육박람회" width={643} height={154} className="h-8 w-auto sm:h-9" priority />
           </Link>
 
-          <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 md:flex">
+          <nav className="hidden min-w-0 flex-1 items-center justify-center gap-5 md:flex">
             {NAV_SECTIONS.map((item) => {
               const matchBase = item.matchPrefix ?? item.href;
               const active = pathname === matchBase || pathname.startsWith(matchBase + "/");
@@ -64,9 +66,27 @@ export default function Header() {
                 </Link>
               );
             })}
+
+            <span className="hidden shrink-0 items-center gap-5 xl:flex">
+              <a
+                href="/"
+                target="_blank"
+                rel="noopener noreferrer"
+                onMouseEnter={() => setOpenDesktopKey(null)}
+                className="shrink-0 whitespace-nowrap rounded-full px-2 py-1.5 text-sm font-medium text-gray-600 transition duration-300 hover:text-gray-900 hover:font-semibold"
+              >
+                주차장 안내
+              </a>
+
+              <span className="flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full bg-gray-50 px-3 py-1.5 text-xs font-medium text-gray-500">
+                혼잡도
+                <span className={`h-2 w-2 shrink-0 rounded-full ${CONGESTION_STYLE[parkingCongestionLevel].dot}`} />
+                <span className={`font-semibold ${CONGESTION_STYLE[parkingCongestionLevel].text}`}>{parkingCongestionLevel}</span>
+              </span>
+            </span>
           </nav>
 
-          <div className="flex items-center gap-3">
+          <div className="flex shrink-0 items-center gap-3">
             <button
               type="button"
               className="flex h-10 w-10 items-center justify-center text-gray-700 transition hover:text-brand"
@@ -135,6 +155,20 @@ export default function Header() {
                       </ul>
                     </div>
                   ))}
+                  <div>
+                    <p className="text-xs font-medium text-gray-400">주차장 안내</p>
+                    <ul className="mt-4 flex flex-col gap-1">
+                      <li className="animate-[nav-item-in_0.5s_ease-out_both]">
+                        <Link
+                          href="/notice/parking"
+                          onClick={() => setOpenDesktopKey(null)}
+                          className="block text-sm font-semibold text-gray-800 transition hover:text-brand"
+                        >
+                          혼잡도: {parkingCongestionLevel}
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               ) : (
                 <div

@@ -4,7 +4,7 @@ import NoticePage from "@/views/notice/ui/NoticePage";
 
 export const metadata: Metadata = buildMetadata({
   title: "공지사항",
-  description: "공지사항, 자주 묻는 질문, 주차 안내를 확인하세요.",
+  description: "공지사항, 자주 묻는 질문, 주차장 안내를 확인하세요.",
   path: "/notice",
 });
 
