@@ -23,7 +23,7 @@ const GROUPS: QuickApplyGroup[] = [
     title: "전체",
     desc: "누구나 참여할 수 있는 특별한 프로그램",
     tone: "bg-gradient-to-br from-gray-900 to-gray-800",
-    items: [{ href: "/apply/teacher-lecture", icon: "🎤", title: "특별 강연", desc: "AI가 만드는 우리의 일상, 미래를 만나는 시간" }],
+    items: [{ href: "/teachers/lecture", icon: "🎤", title: "특별 강연", desc: "AI가 만드는 우리의 일상, 미래를 만나는 시간" }],
   },
   {
     key: "students",
@@ -32,8 +32,9 @@ const GROUPS: QuickApplyGroup[] = [
     desc: "AI·SW로 꿈을 키우는 미래의 주인공",
     tone: "bg-gradient-to-br from-brand to-brand-dark",
     items: [
-      { href: "/apply/golden-bell", icon: "🏆", title: "AI·SW 골든벨", desc: "도전하고, 배우고, 성장하는 AI·SW 퀴즈 대회!" },
-      { href: "/apply/ai-tour", icon: "🧭", title: "오디세이 투어", desc: "보고, 체험하고, 탐험하는 AI·SW 체험 투어" },
+      { href: "/students", icon: "🏬", title: "AI·SW체험한마당 부스 안내", desc: "학생들을 위한 체험 부스를 한눈에 확인하세요" },
+      { href: "/students/golden-bell", icon: "🏆", title: "AI·SW 골든벨", desc: "도전하고, 배우고, 성장하는 AI·SW 퀴즈 대회!" },
+      { href: "/students/ai-tour", icon: "🧭", title: "오디세이 투어", desc: "보고, 체험하고, 탐험하는 AI·SW 체험 투어" },
     ],
   },
   {
@@ -42,7 +43,10 @@ const GROUPS: QuickApplyGroup[] = [
     title: "교사",
     desc: "함께 만들어가는 더 나은 미래교육",
     tone: "bg-gradient-to-br from-brand-deep to-[#3f3570]",
-    items: [{ href: "/apply/teacher-training", icon: "📖", title: "교사 연수", desc: "AI 시대, 교사의 성장을 지원하는 전문 연수" }],
+    items: [
+      { href: "/teachers", icon: "🏬", title: "미래교육박람회 부스 안내", desc: "교원을 위한 체험 부스를 한눈에 확인하세요" },
+      { href: "/teachers/training", icon: "📖", title: "교사 연수", desc: "AI 시대, 교사의 성장을 지원하는 전문 연수" },
+    ],
   },
 ];
 
