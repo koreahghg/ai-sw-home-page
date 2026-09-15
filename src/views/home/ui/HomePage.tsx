@@ -2,6 +2,7 @@ import Link from "next/link";
 import PromoVideo from "@/widgets/promo-video/ui/PromoVideo";
 import TimelineSection from "@/widgets/event-timeline/ui/TimelineSection";
 import QuickApplyGroups from "@/widgets/quick-apply/ui/QuickApplyGroups";
+import RecentNotices from "@/widgets/recent-notices/ui/RecentNotices";
 import BackgroundLines from "@/shared/ui/BackgroundLines";
 import { SITE_NAME, SITE_URL } from "@/shared/config/site";
 
@@ -115,16 +116,14 @@ export default function HomePage() {
         </section>
 
         <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-brand to-brand-dark px-6 py-12 text-center text-white sm:px-12">
-            <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-white/10 blur-3xl" />
-            <p className="text-xl font-black sm:text-2xl">AI로 연결되는 배움, 함께 여는 미래</p>
-            <p className="mt-3 text-sm text-white/80">10.31(토) - 11.1(일) · 전남광주통합특별시교육청AI교육원 · 학생·교원·일반 시민 누구나</p>
-            <Link
-              href="/apply/register"
-              className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-8 py-3.5 text-sm font-bold text-brand transition hover:bg-brand-light"
-            >
-              지금 사전등록하기 →
+          <div className="flex items-center justify-between gap-3">
+            <h2 className="text-lg font-bold text-gray-900">공지사항</h2>
+            <Link href="/notice" className="shrink-0 text-sm font-semibold text-brand hover:underline">
+              전체보기 →
             </Link>
+          </div>
+          <div className="mt-4">
+            <RecentNotices />
           </div>
         </section>
       </div>
