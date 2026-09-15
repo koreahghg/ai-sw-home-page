@@ -3,6 +3,7 @@ import PromoVideo from "@/widgets/promo-video/ui/PromoVideo";
 import TimelineSection from "@/widgets/event-timeline/ui/TimelineSection";
 import QuickApplyGroups from "@/widgets/quick-apply/ui/QuickApplyGroups";
 import BackgroundLines from "@/shared/ui/BackgroundLines";
+import { SITE_NAME, SITE_URL } from "@/shared/config/site";
 
 const HERO_FACTS = [
   { label: "일정", value: "10.31(토) - 11.1(일)" },
@@ -10,9 +11,36 @@ const HERO_FACTS = [
   { label: "대상", value: "학생 · 교원 · 일반 시민 누구나" },
 ];
 
+const EVENT_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  name: SITE_NAME,
+  description: "학생을 위한 AI·SW 한마당과 교원을 위한 미래교육박람회가 한자리에 모이는 행사입니다.",
+  startDate: "2026-10-31T09:30:00+09:00",
+  endDate: "2026-11-01T16:00:00+09:00",
+  eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+  eventStatus: "https://schema.org/EventScheduled",
+  location: {
+    "@type": "Place",
+    name: "전남광주통합특별시교육청AI교육원",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "전남광주",
+      addressCountry: "KR",
+    },
+  },
+  image: [`${SITE_URL}/opengraph-image`],
+  organizer: {
+    "@type": "Organization",
+    name: "전남광주통합특별시교육청",
+  },
+  url: SITE_URL,
+};
+
 export default function HomePage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(EVENT_JSON_LD) }} />
       <section className="relative overflow-hidden bg-gradient-to-br from-brand-dark to-brand text-white">
         <BackgroundLines
           className="pointer-events-none absolute left-1/2 top-1/2 w-[2400px] max-w-none -translate-x-1/2 -translate-y-1/2 opacity-30"
