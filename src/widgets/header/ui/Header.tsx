@@ -69,7 +69,7 @@ export default function Header() {
 
             <span className="hidden shrink-0 items-center gap-5 xl:flex">
               <a
-                href="/"
+                href="/parking"
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseEnter={() => setOpenDesktopKey(null)}
@@ -160,7 +160,7 @@ export default function Header() {
                     <ul className="mt-4 flex flex-col gap-1">
                       <li className="animate-[nav-item-in_0.5s_ease-out_both]">
                         <a
-                          href="/"
+                          href="/parking"
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={() => setOpenDesktopKey(null)}
